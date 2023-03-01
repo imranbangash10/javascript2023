@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /*Add Properties which is not availiable, prototype meaning (parent class) */
+        /* Every object is associated with another object */
+       var mobile =  function(model){
+           this.model = model;
+           this.price = 3000;  //instance member
+        }
+       var samsung = new mobile('s10');
+       var nokia = new mobile('6500');
+       /* here we add property for all object */
+       mobile.prototype.color = "white";  //prototype member
+       document.write(samsung.color);
+       console.log(samsung);
+        /* Iterate property */
+        //dont use object.keys(becauses they not show prototype properties)
+        //use only for an loop
+        for(var key in samsung){
+            document.write(key);
+        }
+    </script>
+
+        <!-- it will return object prototype -->
+        <script>
+            console.log(Object.prototype);
+        /* it will return object from there they derived */
+        var b={}
+        console.log(Object.getPrototypeOf(b));
+            /* it will return where object is itself derived from */
+            console.log(Object.getPrototypeOf(Object.prototype));
+            /* Diagram here  */
+            /* Null
+            
+                Object
+                
+                prototype
+             */
+        </script>
+
+        <!-- How Prototype work -->
+        <!-- Function--prototyoe--object -->
+        <!-- Different ways to access function -->
+        <script>
+            function mobilee(){}
+            var lg = new mobilee();
+            console.log(mobilee.prototype);//(1)
+            console.log(mobilee === mobilee.prototype.constructor);//(2)
+            console.log(mobilee.prototype === lg.__proto__);//(3)Points both to prototype
+            console.log(mobilee === lg.__proto__.constructor);//(4)
+            /* All follow same constructor */
+        </script>
+
+</body>
+</html>

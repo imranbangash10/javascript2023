@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- variable scope -->
+    <script>
+        //global variable(declared outside ftn and its value is accessible throughtout program)
+        //in web browser global variable deleted when you close window.
+        var i = "I am Global variable";
+        function show(){
+            document.write(i+ "<br>");//inside function
+        }
+        show();
+        document.write(i+ "<br>");//Outside function
+
+        function disp()
+        {
+            document.write(i+ "<br>");//inside another function 
+        }
+        disp();
+        if(true)
+        {
+            document.write(i+ "<br>");//inside block
+        }
+    </script>
+
+
+        <!--Local variable  -->
+        <script>
+            //declared inside function defination
+            //created and destroyed when ftn is executed
+            //cannot access outside ftn
+            //variable not declared with var keyword  can be cosidered as global variable
+            function display()
+            {
+                var i ="I am Local variable";
+                document.write(i+ "<br>");
+            }
+            display();
+        </script>
+
+
+        <!-- Local Scope -->
+        <script>
+            //function inside a function.
+            //inner function can access outer function variable.
+            //outer function cannot access inner function variable.
+            //fuction argument work as local variable inside function.
+            function outside()
+            {
+                var i = "I is local variable of outer function";
+                document.write(i + "<br>");
+                function inside()
+            {
+                var j = "J is local variable of inner function";
+                document.write(j + "<br>" +i);
+            }
+            inside();
+            }
+            outside();
+        </script>
+
+</body>
+</html>

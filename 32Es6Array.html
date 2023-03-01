@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Array -->
+    <script>
+        /* Collection of data items stored in a single name */
+        /* Array used for Multiple data items */
+        /* First Element of an array started with zero 0 index */
+        /* Array cannot use string as index in js */
+        /* There is no associative array in js */
+        /* Best way to use array Literals */
+        var student = ["Rehman" , "Safi" , "Imran"];
+        document.write(student);
+        document.write(typeof(student) + "<br>");
+    </script>
+
+
+     <!-- Array Constructor-->
+     <script>
+         var students = new Array("Ali" , "Aslam" , "Usman");
+         document.write(students[1]);
+     </script>
+
+
+     <!-- Accessing Array Element in js -->
+     <script>
+        var stud = ["Rehman" , "Safi" , "Imran",,,,,,,,,,"Khan"];
+        document.write(stud + "<br>");
+     </script>
+
+
+    <!-- Modifying Array Element in js -->
+     <script>
+        var stu = ["Rehman" , "Safi" , "Imran"];
+        stu[0] = "Ali";
+        document.write(stu + "<br>");
+     </script>
+
+
+      <!-- Removing Array Element in js -->
+      <script>
+        var stude = ["Rehman" , "Safi" , "Imran"];
+        delete stude[1];
+        document.write(stude + "<br>");
+     </script>
+
+      <!--  Array Length  Property in js -->
+      <script>
+        var stu = ["Rehman" , "Safi" , "Imran"];
+        document.write(stu.length + "<br>");
+     </script>
+
+     <!-- Array For Loop -->
+     <script>
+          var studen = ["Rehman" , "Safi" , "Imran"];
+          for(let i = 0 ; i < studen.length ; i++){
+              document.write(i + " " + studen[i] + "<br>");
+          }
+     </script>
+     
+     <!-- Array forEach Loop -->
+     <!-- forEach calls provided function once for each element an array, in order -->
+     <!-- array.forEach(function(value,index,arr){}); -->
+     <script>
+         var std = ["Rehman" , "Safi" , "Imran"];
+         std.forEach(function(value,index){
+             document.write(value,index ,array + "<br>");
+         });
+     </script>
+
+      <!-- Array for of Loop -->
+      <script>
+           var st = ["Rehman" , "Safi" , "Imran"];
+           for(let values of st){
+               document.write(values + "<br>");
+           }
+      </script>
+
+     <!--Input From User in Array  -->
+     <script>
+         var elm = prompt("Enter Element Of An Array Be");
+         var worker = [];
+         // Input
+         for (let w = 0; w <= elm; w++){
+             worker[w] = prompt("Enter Name :" );
+         }
+         // Display
+         for(let val of worker){
+             document.write(val+ "<br>");
+         }
+     </script>
+
+        <!-- When assign By User Input -->
+       <!--  <script>
+        var arr = new Array(2);
+        // Input
+        for (let w = 0; w <= arr.length; w++){
+            worker[w] = prompt("Enter Name :" );
+        }
+        // Display
+        for(let val of worker){
+            document.write(val+ "<br>");
+        }
+       </script> -->
+
+       
+
+
+
+
+</body>
+</html>

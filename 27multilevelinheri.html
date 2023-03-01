@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //Super class
+        var mobile = function()
+        {
+            this.a=10;
+        }
+        mobile.prototype.z=30;
+
+        // Sub class
+        var samsung = function()
+        {
+          mobile.call(this);
+            this.b=20;
+        }
+
+        // Sub class of Samsung
+        var galaxy =function()
+        {
+           samsung.call(this);
+            this.c=100;
+        }
+
+        // Prototype inheritance
+        samsung.prototype=Object.create(mobile.prototype);
+        samsung.prototype.constructor=samsung;
+
+        galaxy.prototype=Object.create(samsung.prototype);
+        galaxy.prototype.constructor=galaxy;
+
+        var m = new mobile();
+        var s =new samsung();
+        var g=new galaxy();
+
+        document.write(g.a);
+        document.write(g.b);
+        document.write(g.c+"<br>");
+
+        document.write(s.a);
+        document.write(s.b);
+        document.write(s.z+"<br>");
+
+        document.write(m.a);
+        document.write(m.b);
+        document.write(m.z);
+
+    </script>
+
+</body>
+</html>

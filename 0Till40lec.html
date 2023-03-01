@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- JavaScript is the Programming Language for the Web.
+
+        JavaScript can update and change both HTML and CSS.
+
+        JavaScript can calculate, manipulate and validate data -->
+    <script>
+        /* Inline Way of Adding JS head or in body best is body to write */
+
+        /* Alert */
+        // window.alert() dialog box stop everything to let the user know something
+        window.alert("Hello");
+
+        /* Identifier */
+        //having few numbers , letters , special characters _(underscore)
+        
+        /* DataType */
+        //Primitive- String ,number ,boolean,undefined,null
+        //NonPrimitive- Object, Array, RegExp
+
+
+        /* Operator */
+        /* Arithmetic Opertor */
+        var a = 30;
+        var b = 20;
+        document.write(a+b + "<br>");
+        document.write(a-b + "<br>");
+        document.write(a/b + "<br>");
+        document.write(a*b + "<br>");
+        document.write(a%b+ "<br>");// Reminder
+
+
+        /* Relational Or Comparison Operator */
+        var c = 20;
+        var d = 20;
+        var e = c < d; 
+        var f = c > d;
+        var g = c == d;
+        var h = c === "d";// Equal but Same Type
+        var i = c!=d;
+        document.write(e + "<br>");
+        document.write(f + "<br>");
+        document.write(g + "<br>");
+        document.write(h + "<br>");
+        document.write(i + "<br>");
+
+
+        /* Logical Operators  && AND , || OR , ! NOT */
+        var j = 4 > 6;
+        var k = 5 > 8;
+        var l = j && k;
+        var m = j || k;
+        document.write(l + "<br>");
+        document.write(m + "<br>");
+
+        /* BitWise Operator << Shift Bits Left , >> Shift Bits Right, ~ Ones`s Complaiment , & Logical AND , | Logical OR , ^ exclusive OR */
+        // Logical AND T T Will Be T Other All False
+        // Logical OR Only F F Will Be F Other All True
+        // XOR ^ Only T T F AND F F F Other All True
+        var n = 5; //  00000101 Comparison from Right To Left
+        var o = 4; //  00000100
+        /* var p = n | o ; */    // Comparison from Left To Right
+         var p = n & o; // Comparison from Right To Left
+        document.write(p + "<br>");
+
+        /* Assignment Operator(=,+=,-=,*=,/=,%=,<<=,>>=,>>>=,^=,&=,|=) */
+        var q = 6;
+        var r = 6;
+        q+= 6;
+        r/= 2;
+        document.write(q + "<br>");
+        document.write(r + "<br>");
+
+
+        /* Prompt Method */
+        // Method displays dialogBox that prompt the visitor for input
+    var s = prompt("Enter Your Name : ");
+        document.write(s + "<br>");
+
+
+
+        /* IF Statement */
+        // Execute Instruction or Block of instruction only if condition is true 
+       /*  var s = prompt("Enter Your Roll : ");
+        if (s == 10)
+        document.write(s + "<br>");
+ */
+
+
+        /* IF Else Statement */
+    /*     var s = prompt("Enter Your Roll : ");
+        if (s == 10)
+        {
+           document.write(  "Equal <br>");
+        }
+        else
+        {
+            document.write("Not Equal <br>")
+        }
+ */
+
+
+        /* Else-If */
+        // Multi-way Decision Based on saveral conditions we use else if statement.
+        var result = 17;
+        if (result <= 30)
+        document.write("Fail <br>")
+        else if (result <= 40)
+        document.write("Pass <br>")
+        else if (result <= 60)
+        document.write("Good <br>")
+        else
+        document.write("Very Good <br>")
+
+
+        /* Switch Statement */
+        // Check Saveral Possible Constant Values For An Expression
+        var day = 2;
+        switch(day)
+        {
+            case 1 :
+            document.write("Sun <br>");
+            break;
+            case 2 :
+            document.write("Mon <br>");
+            break;
+            case 2 :
+            document.write("Tue <br>");
+            break;
+            default : 
+            document.write("Wrong <br>");
+           
+        }
+
+
+        /* For Loop */
+        // Loop will be executed to fixed number of times
+        for (var num = 0 ; num <= 10 ; num++){
+            if (num == 3){
+                break;
+            }
+            document.write(num + "<br>");
+        }
+        document.write( "Rest Of Code <br>");
+
+
+        // Nested For Loop
+        for (var nl = 0 ; nl <= 3; nl++){
+            document.write("<strong>Outer Loop</strong>");
+            document.write(nl);
+            document.write("<br>");
+            for (var nj = 0; nj<=5 ; nj++){
+             document.write("Inner Loop");
+            document.write(nj);
+            document.write("<br>");
+            }
+        }
+
+
+        /* While Loop */
+        // Loop keep repeating untill condition is falsed
+        var wl = 1;
+        while(true){
+            if (wl == 3){
+                break;
+            }
+            wl++;
+            document.write(wl + "<br>");
+        }
+        document.write("Rest Of Code <br>")
+
+
+
+        // Nested While Loop
+        var nw = 1;
+        while(nw < 3){
+            document.write("<strong>Outer Loop</strong>");
+            document.write(nw);
+            nw++;
+            document.write("<br>");
+            var jl = 0;
+            while(jl < 5){
+            document.write("Inner Loop");
+            document.write(jl);
+            jl++;
+            document.write("<br>");
+            }
+        }
+
+
+
+        /* Do While Loop */
+        // Same While Loop But Condition is checked after the loop body executed and loop body will it run once
+        var dw = 0;
+        do
+        {
+            if(dw == 3){
+                break;
+            }
+            document.write(dw);
+            dw++;
+            document.write("<br>");
+        }while(true);
+
+
+        // Nested Do While Loop
+        var nn= 0;
+        do{
+            document.write("<strong>Outer Loop</strong>");
+            document.write(nn);
+            nn++;
+            document.write("<br>");
+            var np = 0;
+            do{
+            document.write("Inner Loop");
+            document.write(np);
+            np++;
+            document.write("<br>");
+            }while(np < 5);
+        }while(nn < 3);
+
+
+
+
+        /* Break And Continue */
+        for (var br = 0; br <= 5 ; br++){
+            if(br == 3){
+                break; // Stop Loop
+            }
+            document.write(br);
+            document.write("<br>");
+        }
+
+        for (var ct = 0; ct <= 5 ; ct++){
+            if(ct == 3){
+                continue; // Skip Current Loop
+            }
+            document.write(ct);
+            document.write("<ct>");
+            document.write("<br>");
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>

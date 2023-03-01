@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // Inheritance(Short-Method)
+        function extend(child,parent){
+            child.prototype=Object.create(parent.prototype);
+            child.prototype.costructor=child;
+        }
+       
+        //  Super class
+        var mobile = function(){
+
+        }
+
+        // Prototype Method
+        mobile.prototype.getModal = function(){return this.model;};
+
+        // Sub class
+        var samsung = function(model , price){
+            this.model= model;
+            this.price = price;
+        }
+
+         // Sub class
+         var lenovo = function(model){
+            this.model= model;
+        }
+       
+        // Inheritance(Method-Long)
+     /*    samsung.prototype=Object.create(mobile.prototype);
+        samsung.prototype.costructor = samsung;
+
+        lenovo.prototype=Object.create(mobile.prototype);
+        lenovo.prototype.costructor = lenovo; */
+
+        //with short method use 
+        extend(samsung,mobile);
+        extend(lenovo,mobile);
+        
+        samsung.prototype.getPrice = function(){return this.price;};
+
+
+        var galaxy = new samsung('galaxy',5310);
+        console.log(galaxy.getModal());
+        console.log(galaxy.getPrice());
+
+        var lev3 = new lenovo('Lev-5');
+        console.log(lev3.getModal());
+
+    </script>
+    
+</body>
+</html>

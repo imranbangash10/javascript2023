@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Default Parameter -->
+    <!-- also used null i-e (c=null) -->
+    <!-- also used with array (a=[100]) -->
+    <script>
+        function add(a,b,c=30){
+            document.write("A= " + a + "<br>");
+            document.write("B= " + b + "<br>");
+            document.write("C= " + c + "<br>");
+        }
+        add(10,20);
+    </script>
+
+
+    <!-- Rest Parameter -->
+    <script>
+        function show(a, ...args)
+        {
+          //  document.write(a+","+args);
+            document.write(args[3]);
+        }
+        show(10,20,30,40,50);
+    </script>
+
+    <!-- Return Statement(Return any type data,object,array) -->
+    <script>
+       function sum(a,b){
+           return(a+b);
+       }
+       document.write(sum(20,30));
+    </script>
+
+</body>
+</html>

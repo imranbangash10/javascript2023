@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /* Inheritance */
+        //extends keyword is used to derive child class from parent.
+        //extemds cam ne used to subclass custom classes as well as built in objects.i-e
+        //class mydate extends Array()
+        class Father{
+            fmoney(){
+                return "Father Money";
+            }
+        }
+
+        class Son extends Father{
+            smoney(){
+                return "Son Money";
+            }
+        }
+        class GrandSon extends Father{
+            smoney(){
+                return "Son Money";
+            }
+        }
+
+        var gs = new GrandSon();
+        document.write(gs.smoney());
+        document.write(gs.fmoney());
+    </script>
+
+
+    <!-- Super Method -->
+    <!-- Super() is used to initialize parent class constructor and used it before this -->
+    <script>
+         class Father1{
+             constructor(money){
+                 this.money = money;
+             }
+            fathermoney(){
+                return "Father Money" + this.money;
+            }
+        }
+
+        class Sons extends Father1{
+            constructor(money){
+                super(money);
+                this.a=12;
+            }
+            sonmoney(){
+                return "Son Money" +this.a;
+            }
+        }
+
+        var son1 = new Sons(100000);
+        document.write(son1.fathermoney());
+        document.write(son1.sonmoney());
+    </script>
+    
+    <!-- Method Overriding -->
+    <!-- Same function name with different implementations -->
+    <script>
+        class Father2{
+            show1(){
+                return "super class";
+            }
+        }
+        class Son2{
+            show1(){
+                return "Sub class";
+            }
+        }
+        var s = new Son2();
+        document.write(s.show1());
+        var f2 = new Father2();
+        document.write(f2.show1());
+    </script>
+
+
+
+</body>
+</html>

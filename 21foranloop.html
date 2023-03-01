@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /* for an loop used to through an object properties */
+        /* check to exist properties */
+        function mobile(model){
+            this.model = model;
+            this.color = "blue";
+            this.price = function(){
+                document.write(this.model+this.color+"Price is 3000<br>");
+            }
+        }
+        var samsung = new mobile("s10");
+        var nokia = new mobile("g5");
+        for(var spec in nokia){
+            if(typeof nokia[spec] !== 'function'){
+            document.write(spec +" "+nokia[spec]+"<br>");
+        }}
+         document.write(Object.keys(nokia));
+    </script>
+
+</body>
+</html>

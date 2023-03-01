@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        /* Classes are in-fact Special functions  and class is not hoisted*/
+        /* Constructor method is a special method for creating and initializing object
+        created with in a class  */
+        //Class Declaration
+        class Mobile{
+            constructor(){
+                //Instance Member
+                this.mobile = "G-10";
+                this.show = function(){ return "This is Mobile"};
+            }
+            //Prototype Member
+         display(){return "Prototype member"};
+        };
+        var samsung = new Mobile()
+        document.write(samsung.mobile);
+        document.write(samsung.show());
+        document.write(samsung.display());
+
+    </script>
+
+
+
+        <!-- Default Constructor -->
+    <script>
+       /*  if you dont specify constructor method a default constructor method is used */
+       class Mob{
+           display(){
+            return "Default Constructor";
+           }
+       };
+       var sams = new Mob()
+        document.write(sams.display());
+    </script>
+
+
+
+    <!-- Paramaterized Constructor -->
+    <script>
+        class Mobiles{
+            constructor(model_no,color){
+                this.model = model_no;
+                this.coloris = color;
+            }
+            show(){
+                return this.model + "Pricee is : Rs 3000" + this.coloris + "color";
+            }
+        };
+        var LG = new Mobiles("G-5","blue")
+        document.write(LG.show());
+    </script>
+
+
+
+
+</body>
+</html>

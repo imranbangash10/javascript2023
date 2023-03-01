@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- Multidimension Array -->
+    <script>
+        var stud = [
+            ["Imran" , "English" , 161308],
+            ["Rehman" , "Physics" , 161302],
+            ["Safiullah" , "Urdu" ,161536]
+            ];
+            for(let i= 0 ; i < 3 ; i++){
+                for(let j= 0 ; j < 3 ; j++){
+                    document.write(stud[i][j]);
+                }
+                document.write("<br>");
+            }
+    </script>
+
+
+     <!-- Multidimension Array Array Constructor Second Method-->
+     <script>
+        var student = new Array (
+            ["Imran" , "English" , 161308],
+            ["Rehman" , "Physics" , 161302],
+            ["Safiullah" , "Urdu" ,161536]
+        );
+            for(let i= 0 ; i < 3 ; i++){
+                for(let j= 0 ; j < 3 ; j++){
+                    document.write(i + " " + j + "|" + student[i][j]);
+                }
+                document.write("<br>");
+            }
+    </script>
+
+    <!-- Empty 2D Array Best Way For Many Rows -->
+    <!-- <script>
+        var std = [];
+        var rows = 3;
+        var cols = 3;
+        for (var i = 0 ; i < rows ; i++){
+            std[i] = []; //new row create
+            std[i] = new Array(cols); //column create for each rows
+        }
+        // Display
+        for(var i = 0; i < rows ; i ++){
+            for (var j = 0; j < cols ; j++){
+                document.write(std[i][j]);
+            }
+            document.write("<br>");
+        }
+    </script> -->
+
+    <!-- Second Method -->
+    <script>
+        var rows = 3;
+        var cols = 3;
+        var std = new Array(rows);
+        for (var i = 0 ; i < rows ; i++){
+            std[i] = []; //new row create
+            std[i] = new Array(cols); //column create for each rows
+        }
+        // Display
+        for(var i = 0; i < rows ; i ++){
+            for (var j = 0; j < cols ; j++){
+                document.write(std[i][j]);
+            }
+            document.write("<br>");
+        }
+    </script>
+
+
+    <!-- Input From User 2D Array -->
+    <script>
+        var row = 3;
+        var col = 3;
+        var stud = new Array(row);
+        for (var x = 0 ; x < row ; x++){
+            stud[x] = new Array(col); //column create for each rows
+        }
+        // Input Array 
+        for(var s = 0; s < row ; s++){
+            for (var k = 0; k < col ; k++){
+                    stud[s][k] = prompt("Enter Name");
+            }      
+        }
+        //Displaying Value
+        for(var s = 0; s < row ; s++){
+            for (var k = 0; k < col ; k++){
+                document.write(s + " "+ k + stud[s][k])
+            }
+            document.write("<br>");
+        }
+        
+
+
+
+    </script>
+
+</body>
+</html>

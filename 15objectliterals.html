@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        /*Object Literals Two Methods */
+        var fees = {};
+        fees['imran'] = 100; 
+        fees['khan'] = 200;
+        fees['usman'] = 300;
+        document.write(fees['imran']);
+        /* 2nd Method */
+        var fees = {};
+        fees.usama = 100;
+        fees.aslam = 200;
+        fees.ali = 300;
+        document.write(fees.ali);
+    </script>
+
+    <script>
+         var fees = {};
+        fees['usman'] = 300;
+        fees['total'] = function(){return 300+100;};
+        document.write(fees['total']());//fees.total(); Same result
+    </script>
+
+    <!-- Same Method But Easy -->
+        <script>
+            var fee = { 'ahmad' : 100, 
+                        'aman' : 200, 
+                        'haris' : 400,
+                        'total' : function(){return (100+500);}
+                         };
+            document.write(fee['total']());
+        </script>
+    
+</body>
+</html>

@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //have no specifid name
+        //can be stored in variable
+        //can be return in a function
+        //can be passed in function
+        var haris = function(){
+            document.write("Haris is Running");
+        }
+        haris();
+
+    </script>
+  
+    <script>
+           var a = function(b,c){
+        document.write(b  +c);
+    }
+    a(10,20);
+    </script>
+
+
+<!-- Passing Annonymous Function As Arguments -->
+    <script>
+        function disp(myfun){
+            return myfun();
+        }
+     document.write(disp(function(){return "Hello World"}));
+    </script>
+
+<!-- Returning Annonymous Function -->
+    <script>
+        function show(a){
+            return function(b){
+                return a*b;
+            }
+        }
+        var af = show(10);
+         document.write(af(20));
+    </script>
+
+</body>
+</html>

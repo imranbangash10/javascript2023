@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- Date -->
+    <!-- Date Object Provides a Sophistacated set of Methods for manipulating dates and time -->
+    <!-- It reads client machine date and times so if client date and time is incorrect, your script will reflect this fact -->
+    <!-- Days of weeks and months of the year are enumarated beginning with zero 0 sunday 1 monday 0 january 1 february -->
+    <!-- Days of month start with one -->
+    <!-- Date objects are created with new Date() constructor Date objects created by programmer static   -->
+    <script>
+        var tarikh1 = new Date();
+        document.write(tarikh1 + "<br>");
+        // New Date millisecond like January 1,1970,00:00:0 Universal Time (UTC)
+        var tarikh2 = new Date(1530867166586);
+        var tarikh3 = new Date(1638392738);
+        document.write(tarikh2 + "<br>");
+        document.write(tarikh3 + "<br>");
+        // new Date()
+        var tarikh4 = new Date(2020,8,26,9,45,35,0);//(Y,M,D,H,Min,Sec,MilliSeconds)
+        document.write(tarikh4 + "<br>");
+        // Date String
+        //new Date(strings); Create new date object from a date string
+        var tarikh5 = new Date("Sep 26, 2020 08:57:10");
+        document.write(tarikh5 + "<br>");
+        // ISO Date
+        var tarikh6 = new Date("2020-9-27");
+        document.write(tarikh6 + "<br>");
+        // Set Date
+        var tarikh7 = new Date();
+        tarikh7.setHours(23);
+        document.write(tarikh7+ "<br>");
+        tarikh7.setMinutes(56);
+        document.write(tarikh7+ "<br>");
+        tarikh7.setSeconds(54);
+        document.write(tarikh7+ "<br>");
+        tarikh7.setDate(23);
+        document.write(tarikh7+ "<br>");
+        tarikh7.setMonth(7);
+        document.write(tarikh7+ "<br>");
+        tarikh7.setFullYear(2020,09,27);
+        document.write(tarikh7+ "<br>");
+        // Get Date
+        var tarikh8 = new Date();
+        document.write(tarikh8.getHours() + "<br>");
+        document.write(tarikh8.getMinutes() + "<br>");
+        document.write(tarikh8.getSeconds() + "<br>");
+        document.write(tarikh8.getDate() + "<br>");
+        document.write(tarikh8.getMonth() + "<br>");
+        document.write(tarikh8.getFullYear() + "<br>");
+        //pronlem is to solve day name and month name not return
+        var tarikh9 = new Date();
+        var month = tarikh9.getMonth();
+        var day = tarikh9.getDay();
+        document.write(getMonthName(month) + "<br>")
+        document.write(getDayName(day) + "<br>")
+        function getMonthName(monthNumber){
+            var monthname = ["January", "Feburary" ,"March","April","May","June","July","August","September","October","November","December"];
+            return monthname[monthNumber];
+            //Same for day
+        }   
+    </script>
+
+</body>
+</html>

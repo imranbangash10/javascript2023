@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /* Object instance are created with constructor */
+        /*  The constructor() method is called automatically when a class is initiated */
+        /*  in fact, if you do not have a constructor method, JavaScript will add an invisible and empty constructor method. */
+        function mobile(){
+            this.model = 1100;
+            this.price = function(){
+                document.write(this.model+"Price is 3000<br>");
+            }
+        }
+        var samsung = new mobile();
+        samsung.price();
+    </script>
+
+    <!-- Constructor with parameter -->
+    <script>
+            function mobile(model,price){
+            this.model = model;
+            this.price = price;
+            this.total = function(){
+                return this.model+this.price;
+            }
+        }
+        var samsung = new mobile("3310",2000);
+        var lg = new mobile("G-5",5000)
+       document.write(samsung.total());
+       document.write(lg.total());
+        
+    </script>
+
+</body>
+</html>

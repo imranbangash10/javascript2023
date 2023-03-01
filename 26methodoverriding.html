@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //function name same but different purpose
+        function extend(child,parent){
+            child.prototype=Object.create(parent.prototype);
+            child.prototype.costructor=child;
+        }
+
+
+        // super class
+        var mobile = function(){
+
+        }
+
+         //prototype method
+         mobile.prototype.show=function(){return "Super class method"};
+
+        // child class
+        var samsung = function(){
+
+        }
+        extend(samsung,mobile);
+        samsung.prototype.show=function(){return "Child class method"};
+
+        var sam = new samsung();
+        var mob = new mobile();
+
+        document.write(mob.show());
+        document.write(sam.show());
+
+      
+    </script>
+
+</body>
+</html>

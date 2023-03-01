@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- indexOf() Method -->
+    <script>
+        var student = ["Ali" , "Aslam" , "Usman"];
+        var pos = student.indexOf("Ali",0);//start from which pos 
+        document.write(pos + "<br>");
+    </script>
+
+
+    <!--  concat() Method-->
+    <!-- usec to merge two or more arrays -->
+    <script>
+        var student1 = ["Ali" , "Aslam" , "Usman"];
+        var student2 = ["Ahmad" , "Imran"];
+        var student3 = ["Bilal" , "Hasssan"];
+        var concat = student1.concat(student2, student3);
+        document.write(concat + "<br>");
+    </script>
+
+
+    <!-- join() Method -->
+    <!-- join element of an array to string and return string -->
+    <script>
+         var student4 = ["Ali" , "Aslam" , "Usman"]; 
+         var join = student4.join("/");
+         document.write(join + "<br>");
+    </script>
+
+
+    <!-- reverse() Method -->
+    <script>
+         var student5 = ["Ali" , "Aslam" , "Usman"]; 
+         var reverse = student5.reverse();
+         document.write(reverse + "<br>");
+    </script>
+
+
+    <!-- slice() Method -->
+    <!-- Return a shallow copy of a portion of an array into new array object selected from begin to end
+    original array will not be modified -->
+    <script>
+        var student6 = ["Ali" , "Aslam" , "Usman"];
+        var slice = student6.slice(0,1);
+        document.write(slice + "<br>");
+    </script>
+
+
+    <!-- toString() Method -->
+    <!-- Return the string if not write also can be invoked automatically -->
+    <script>
+         var student7 = ["Ali" , "Aslam" , "Usman"];
+         var tostr = student7.toString();
+         document.write(tostr + "<br>");
+    </script>
+
+
+    <!-- Array.isArray() Method -->
+    <!-- Determine whether passed value is an  array function should return true or false -->
+    <script>
+         var student8 = ["Ali" , "Aslam" , "Usman"];
+         var arisarr = Array.isArray([student8]);
+         document.write(arisarr);
+         var falsee = ("This is Not Array");
+         var arrfalsee = Array.isArray(falsee);
+         document.write(arrfalsee  + "<br>");
+    </script>
+
+
+    <!-- splice() Method -->
+    <!-- Changes contents of an array by removing existing elements or addding new element
+    Method changes original array -->
+    <script>
+        var student9 = ["Ali" , "Aslam" , "Usman" ,"Khan" , "Usama"];
+        // student9.splice(2); // Delete start 2 num
+        student9.splice(2,2); //Delete only 2 from last
+      //  student9.splice(2 ,0 ,"Dell","HP");//start,delete,add
+        document.write(student9 + "<br>");
+    </script>
+
+
+    <!-- fill() Method -->
+    <!--Fill All Element in array with a static value  -->
+    <script>
+        var student10 = ["Ali" , "Aslam" , "Usman" ,"Khan" , "Usama"];
+        student10.fill("Don" , 1, 3);//add start end
+        document.write(student10 + "<br>");
+        var newarr = new Array(3).fill("veer");
+        document.write(newarr + "<br>"); 
+    </script>
+
+
+    <!-- shift() Method -->
+    <!-- Remove first element of an array and return that element and also changed array length -->
+    <script>
+        //first remove method not display
+        var student11 = ["Ali" , "Aslam" , "Usman" ,"Khan" , "Usama"];
+        student11.shift();
+        document.write(student11 + "<br>");
+        student11.shift();
+        document.write(student11 + "<br>");
+        //Only Remove Element  Display
+        var student12 = ["Ali" , "Aslam" , "Usman" ,"Khan" , "Usama"];
+        var remdisp = student12.shift();
+        document.write(remdisp + "<br>");
+    </script>
+
+
+    <!-- unshift() Method -->
+    <!-- Add One or More element in the begining of an Array and return  new length of an array-->
+    <script>
+        //All Element displayed
+         var student12 = ["Ali" , "Aslam" , "Usman" ,"Khan" , "Usama"];
+        student12.unshift("Dell" , "HP");
+        document.write(student12 + "<br>");
+        //Show new array and array length
+        var student13 = ["Ali" , "Aslam" , "Usman" ,"Khan" , "Usama"];
+        var adddisp =  student13.unshift("Dell" , "HP");
+        document.write(student13 + " " + " Array Length is : " + adddisp + "<br>");
+    </script>
+
+
+    <!-- push() Method -->
+    <!--  Add One or More element in the End of an Array and return  new length of an array -->
+    <script>
+         //All Element displayed
+        var student14 = ["Ali" , "Aslam" , "Usman" ,"Khan" , "Usama"];
+        student14.push("Dell" , "HP");
+        document.write(student14 + "<br>");
+        //Show new array and array length
+        var student15 = ["Ali" , "Aslam" , "Usman" ,"Khan" , "Usama"];
+        var adddispp =  student15.push("Dell" , "HP");
+        document.write(student15 + " " + " Array Length is : " + adddispp + "<br>");
+    </script>
+
+
+    <!-- pop() Method -->
+    <!-- Remove the last element of an array and return that removed element also changed array length -->
+    <script>
+        //not show removed element
+         var student16 = ["Ali" , "Aslam" , "Usman" ,"Khan" , "Usama"];
+         student16.pop();
+         document.write(student16 + "<br>");
+         //show only removed element
+         var student17 = ["Ali" , "Aslam" , "Usman" ,"Khan" , "Usama"];
+         var pop =  student17.pop();
+         document.write(pop);
+    </script>
+
+</body>
+</html>

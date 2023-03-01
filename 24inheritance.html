@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /* Parent class */
+        var mobile = function(){
+            this.a = 10;
+        }
+        mobile.prototype.z=30;
+        /* Child class */
+        var samsung = function(){
+            mobile.call(this);
+            this.b = 20;
+        }
+        samsung.prototype = Object.create(mobile.prototype);
+        samsung.prototype.constructor = samsung;
+        var s =new samsung();
+        document.write(s.a);
+        document.write(s.z);
+    </script>
+
+</body>
+</html>

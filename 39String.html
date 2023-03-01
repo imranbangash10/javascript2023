@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- String is built in object corresponding to  the primative datatype  -->
+    <!-- String is group of charaacter -->
+    <!-- "" ,``, '' is String -->
+    <script>
+        var str1 = "Hello World";
+        var str2 = 'Hello World';
+        var str3 = `Hello World`;
+        document.write(str1 + "<br>" + str2 + "<br>" + str3 + "<br>")
+        document.write("I Am A 'Good' Boy" + "<br>")
+            // String Length
+        var str4 = "Hello World";
+        document.write(str4.length + "<br>");
+        // IndexOf Method
+        var str17 = "Hello Worlde";
+        document.write(str17.indexOf("W") + "<br>");
+        document.write(str17.indexOf("e", 7) + "<br>");
+        // Search String(Similar to indexof but not contain second arguuments)
+        var str18 = "Hello World";
+        document.write(str18.search("d") + "<br>");
+        // Slice Method(extract Part from String one less than end)
+        var str19 = "Hello World Lets Learn JavaScript";
+        document.write(str19.slice(6, 18) + "<br>");
+        // Substring Method(Similar to slice but difference is cannot accept negative indexes)
+        var str20 = "Hello World Lets Learn JavaScript";
+        document.write(str20.substring(6, 18) + "<br>");
+        // Substr Method(Similar to slice but difference is if start is negative index start counting from ends of string)
+        var str21 = "Hello World Lets Learn JavaScript";
+        document.write(str21.substr(6, 8) + "<br>"); //(start,number of characters)
+        // String Uppecase
+        var str5 = "Hello World";
+        document.write(str5.toUpperCase() + "<br>");
+        // String Lowecase
+        var str6 = "Hello World";
+        document.write(str4.toLowerCase() + "<br>");
+        // Trim method removes whitespaces
+        var str7 = "          Hello World        ";
+        document.write(str7.trim() + "<br>");
+        // Replace method 
+        var str8 = "Hello World";
+        document.write(str8.replace("World", "Friends") + "<br>");
+        // String Concatenation
+        var str9 = "Hello";
+        var str10 = "World";
+        document.write(str9 + str10 + "<br>");
+        var str11 = "Hello".concat("World", " ", "How Are You"); //used plus or comma to separate
+        document.write(str11 + "<br>");
+        // String split 
+        var str16 = "Hello&World&How&Are&You&I&Am&Fine"
+        var array = str16.split("&");
+        document.write(array[4] + "<br>");
+    </script>
+
+
+    <!-- Template Literals or Template Strings-->
+    <!--Allowing Embedded expressions Enclosed by back-tick `` -->
+    <!-- Multiple lines can be writtten but not in double quotes -->
+    <script>
+        var str12 = `Hello
+                            World`;
+        document.write(str12 + "<br>");
+        // String interpolation 'Template literals can contains placeholderx they are indicated by $ sign and curly braces (${expression})'
+        var a = 10;
+
+        var b = 20;
+        document.write(`${a + b} Hello World` + "<br>");
+        // Now in function
+        var c = 20;
+        var d = 30;
+
+        function myfun(say) {
+            return say;
+        }
+        document.write(`${myfun("Hello")}World <br>`);
+    </script>
+
+
+    <!-- Escape Notations -->
+    <!-- \n(new Line) , \t(tab) ,  \0(null) , \" , \\ , \r(carriage return(vertical tab) , \t(tab) , \b(backspace) , \f(formfeed) -->
+    <script>
+        console.log("Hello \n World");
+    </script>
+
+
+
+    <script>
+        // charAt()
+        // Return a character at a specified in a string
+        var str14 = "Hello World";
+        document.write(str13.charAt(1) + "<br>");
+        // Numbers
+        var n1 = 10;
+        var n2 = 10.10;
+        var n3 = 5e3;
+        var n4 = 34e-5;
+        var n5 = new Number(100);
+        var n6 = "200";
+        var n7 = new Number("300");
+        document.write(n1 + typeof(n1) + "<br>");
+        document.write(n2 + typeof(n2) + "<br>");
+        document.write(n3 + typeof(n3) + "<br>");
+        document.write(n4 + typeof(n4) + "<br>");
+        document.write(n5 + typeof(n5) + "<br>");
+        document.write(n6 + typeof(n6) + "<br>");
+        document.write(n7 + typeof(n7) + "<br>");
+        // Number With Strings
+        var n8 = "hello";
+        var n9 = 20;
+        var n10 = "30";
+        document.write(n8 - n9 + "<br>"); //Nan(Not a Numbet)
+        document.write(n9 - n10 + "<br>");
+        document.write(n10 - n9 + "<br>");
+        document.write(n8 - n9 - n10 + "<br>");
+        document.write("Cos Of String it will not plus just concat " + n9 + n10 + "<br>");
+        //Nan
+        //Nan is not equal amything
+        if (NaN == "Hello") {
+            document.write("Equal");
+        } else {
+            document.write("Not Equal <br>");
+        }
+        //isNaN() check valid number
+        var n11 = "50";
+        var n12 = 10;
+        var n13 = 20;
+        var n14 = "Hello";
+        if (isNaN(n11)) {
+            document.write("illegal");
+        } else {
+            document.write("legal <br>");
+        }
+        // infinity and negative infinity
+        document.write(5 / 0 + "<br>");
+        document.write(-5 / 0 + "<br>");
+        // tostring Method("Return Number as string can use output as hexadecimal , octal , binary")
+        var n15 = 10;
+        document.write(typeof(n15) + "<br>");
+        // document.write(typeof(n15.toString()));
+        //document.write(n15.toString(2) + "<br>");//Binray
+        // document.write(n15.toString(8) + "<br>"); //octal
+        document.write(n15.toString(16) + "<br>"); //hexadecimal return 
+        //To exponential(convert number to exponential)
+        var n16 = 5768.94939;
+        document.write(n16.toExponential() + "<br>");
+        document.write(n16.toExponential(2) + "<br>");
+        document.write(n16.toExponential(4) + "<br>");
+        //toFixed() converts number into strings and also specified decimal number and also round number
+        var n17 = 23.65823;
+        document.write(n17.toFixed() + "<br>");
+        document.write(n17.toFixed(2) + "<br>");
+        document.write(n17.toFixed(4) + "<br>");
+        document.write(n17.toFixed(8) + "<br>");
+        //toPrecision() formats a number to a specified length
+        var n18 = 19.65823;
+        document.write(n18.toPrecision() + "<br>"); //Same value retrun which is spacified
+        document.write(n18.toPrecision(2) + "<br>"); //Round up
+        document.write(n18.toPrecision(4) + "<br>");
+        document.write(n18.toPrecision(8) + "<br>");
+        //isInteger() Determine whether value is integer or not
+        /*  document.write("No Parameter :" + Number.isInteger() + "<br>");
+         document.write("100 :" + Number.isInteger(100) + "<br>");
+         document.write("-100 :" + Number.isInteger(-100) + "<br>");
+         document.write("100.45 :" + Number.isInteger(100.45) + "<br>");
+         document.write("200-100 :" + Number.isInteger(200-100) + "<br>");
+         document.write("0.1 :" + Number.isInteger(0.1) + "<br>");
+         document.write(' "100 :" ' + Number.isInteger(100.45) + "<br>");
+         document.write("Hello :" + Number.isInte */
+        //parseInt() passing string return integer/*  */
+        /*  document.write(parseInt("10") + "<br>");
+         document.write(parseInt("12.00") + "<br>");
+         document.write(parseInt("10 20 30") + "<br>");
+         document.write(parseInt("15.45") + "<br>");
+         document.write(parseInt(" 90 ") + "<br>");
+         document.write(parseInt("10 years") + "<br>");
+         document.write(parseInt("years 10") + "<br>");
+         document.write(parseInt("020") + "<br>");
+         document.write(parseInt("12",8) + "<br>");  //12octal = 10decimal
+         document.write(parseInt("0x12") + "<br>");  //12hex = 18decimal
+         document.write(parseInt("10",16) + "<br>"); //10hex = 16decimal
+         //parseFloat() passing string return Floating point number */
+        /* document.write(parseFloat("10") + "<br>");
+        document.write(parseFloat("12.00") + "<br>");
+        document.write(parseFloat("10 20 30") + "<br>");
+        document.write(parseFloat("15.45") + "<br>");
+        document.write(parseFloat(" 90 ") + "<br>");
+        
+        ocument.write(parseFloat("10 years") + "<br>");
+        document.write(parseFloat("years 10") + "<br>");
+        document.write(parseFloat("020") + "<br>");
+        document.write(parseFloat("12",8) + "<br>");  
+        document.write(parseFloat("0x12") + "<br>");  
+        document.write(parseFloat("10",16) + "<br>"); */
+        //Math() is static and its properties and method is directly accessible
+        //contains set of constants and methods enable arithmatic operations
+        //caannot instantiate math object
+        document.write(Math.PI + "<br>");
+        document.write(Math.sqrt(64) + "<br>");
+        document.write(Math.abs(-64) + "<br>");
+        document.write(Math.abs(null) + "<br>");
+        document.write(Math.pow(2, 3) + "<br>");
+        document.write(Math.trunc(12.564) + "<br>");
+        //min max
+        document.write(Math.min(50, 5, 90, 6, 100) + "<br>");
+        document.write(Math.max(50, 5, 90, 6, 100) + "<br>");
+        //floor() round number to downwards nearest integer
+        document.write(Math.floor(2.1) + "<br>");
+        document.write(Math.floor(6.65) + "<br>");
+        document.write(Math.floor(0.4) + "<br>");
+        document.write(Math.floor(0.6) + "<br>");
+        document.write(Math.floor(-2.1) + "<br>");
+        document.write(Math.floor(-6.65) + "<br>");
+        //round() round up .5 round down.4
+        document.write(Math.floor(2.1) + "<br>");
+        document.write(Math.floor(6.65) + "<br>");
+        document.write(Math.floor(0.4) + "<br>");
+        document.write(Math.floor(0.6) + "<br>");
+        document.write(Math.floor(-2.1) + "<br>");
+        document.write(Math.floor(-6.65) + "<br>");
+        //Generate Random Number
+        var x = Math.floor((Math.random() * 100 + 1));
+        document.write(x);
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- OOP is a programming language model based on concept of object which contain data and code -->
+    <!-- Encapsulation -->
+    <!-- The JavaScript Encapsulation is a process of binding the data (i.e. variables) with the functions acting on that data. 
+        It allows us to control the data and validate it. 
+        To achieve an encapsulation in JavaScript: - Use var keyword to make data members private. -->
+    <script>
+        class Student  
+  {  
+    constructor()  
+    {  
+       var name;  
+       var marks;  
+    }  
+        getName()  
+        {  
+          return this.name;  
+        }  
+      setName(name)  
+      {  
+        this.name=name;  
+      }  
+        
+      getMarks()  
+      {  
+        return this.marks;  
+      }  
+    setMarks(marks)  
+    {  
+        if(marks<0||marks>100)  
+        {  
+          alert("Invalid Marks");  
+        }  
+      else  
+        {  
+          this.marks=marks;  
+        }  
+    }  
+    }  
+    var stud=new Student();  
+     stud.setName("John");  
+     stud.setMarks(10);//alert() invokes  
+     document.writeln(stud.getName()+" "+stud.getMarks());  
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+    <!--Function are subprogram which are used to perform task-->
+    <!-- 2Types
+    1)Built in i-e write(), alert() etc
+    2)User Define Function -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+  <!--   <script>
+        function disp()
+        {
+            document.write("hello"+"How aare you");
+        }
+        disp();
+    </script> -->
+
+
+
+    <!-- Function with parameter -->
+    <!-- <script>
+          function display(firstname,lastname)
+        {
+            document.write(firstname + "  " + lastname);
+        }
+        display("Imran","Khan");
+    </script>
+ -->
+
+
+ <!-- Argument Object(Contain array of argument when ftn was called) -->
+       <script>
+          function display(firstname,lastname)
+        {
+            document.write(firstname[0]);
+            document.write(arguments[0]);
+        }
+        display("Imran","Khan");
+    </script> -->
+
+
+     <script>
+        function disp()
+        {
+            for(var i=0 ; i<arguments.length ; i++)
+            {
+                document.write(arguments[i] + " ");
+            }
+        }
+        disp("Imran" , "Khan");
+    </script> -->
+
+    <!-- Too Many Ftn arguments -->
+    <script>
+        function add(a , b)
+        {
+            document.write("a" + a + "b" + b + "c" +arguments[2]);
+        }
+        add(10,20,30);
+    </script>
+
+</body>
+</html>

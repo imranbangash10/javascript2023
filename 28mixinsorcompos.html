@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /* third method Process*/
+        function mixin (target,...sources){
+            Object.assign(target,...sources);
+        }
+
+        /* First Method */
+        var eating ={
+            eat : function(){
+                return "I Can Eat <br>";
+            }
+        };
+
+        var walking ={
+            walk : function(){
+                return "I Can Walk <br>";
+            }
+        };
+
+        var talking ={
+            Talk : function(){
+                return "I Can Talk <br>";
+            }
+        };
+
+        var starting ={
+            start : function(){
+                return "Start The Rebot <br>";
+            }
+        };
+
+        var stoping ={
+            stop : function(){
+                return "Stop The Rebot <br>";
+            }
+        };
+
+        /* var khan = Object.assign({},eating,walking,talking);
+        document.write(khan.eat());
+
+        var rebot = Object.assign({},walking,talking,starting ,stoping);
+        document.write(rebot.walk());
+        document.write(rebot.start()); */
+
+        //Second Method code simplicity
+        var human = function(){}
+        var rebot = function(){}
+
+        /* Object.assign(human.prototype, walking,talking,eating);
+        Object.assign(rebot.prototype, walking,talking,starting ,stoping); 
+        var aslam = new human();
+        document.write(aslam.walk()); */
+
+        /* Third Method */
+        mixin(human.prototype,eating,walking,talking);
+        mixin(rebot.prototype,walking,talking,starting,stoping);
+        var aslam = new human();
+        document.write(aslam.walk());
+    </script>
+
+</body>
+</html>

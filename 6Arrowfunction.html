@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Arrow Function -->
+    <!-- Always shorter syntax compared to function expression -->
+    <!-- Always annonymous -->
+    <script>
+        //Function Expression
+        var disp = function show(){
+            document.write("Function Expression<br>");
+        }
+        disp();
+
+        //Annoynomous Function 
+        var disp1 = function (){
+            document.write("Annoynomous Function <br>");
+        }
+        disp1();
+
+        //Arrow Function
+        var disp2 = () => {
+            document.write("Arrow Function <br>");
+        }
+        disp2();
+
+        //Arrow Function With Parameter
+        var disp3 = a =>  document.write("Arrow Function Parameter"+a+"<br>");
+        disp3(10);
+
+        //Two or More Parameter
+        var disp4 = (a,...args) => {
+            document.write("Arrow Function Parameter"+a+"," + args+"<br>");
+        }
+        disp4(10,20,30,40,50);
+
+    </script>
+
+   
+</body>
+</html>
